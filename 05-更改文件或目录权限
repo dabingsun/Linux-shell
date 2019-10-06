@@ -16,3 +16,10 @@ user/group/others/all --> （u,g,o,a）{+-=}-->{rwx}
 -r-x -->4+0+1=5
 --wx -->0+2+1=3
 即：chmod -R 777 filename
+
+-----更改所属用户组-----
+chgrp 属性组 文件名
+
+-----更改所属用户-----
+chown 所属用户 文件名
+chown 所属用户：属性组 文件名
