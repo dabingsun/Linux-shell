@@ -1,0 +1,18 @@
+-----更改权限-----
+只有root用户或者文件的拥有者才具有改变文件的权限。
+chmod [-R] <mode> <filelist> 命令  （change file mode bit 更改文件模式位），Linux文件属性有两种设置方法，一种是数字，一种是符号。 
+Linux文件的基本权限就有九个，分别是owner/group/others三种身份各有自己的read/write/execute权限。
+文件的权限字符：『-rwxrwxrwx』对应的数字为：    
+    r:4 
+    w:2
+    x:1
+-----使用字符设置
+user/group/others/all --> （u,g,o,a）{+-=}-->{rwx} 
+即：chmod -R u=rwx,g=rw,o=r filename
+
+-----使用数字设置
+-rwxrwxrwx 777
+-rw -->4+2=6
+-r-x -->4+0+1=5
+--wx -->0+2+1=3
+即：chmod -R 777 filename
