@@ -1,0 +1,17 @@
+Linux一般作为服务器使用，而服务器一般放在机房，你不可能在机房操作你的Linux服务器。
+这时我们就需要远程登录到Linux服务器来管理维护系统。
+Linux系统中是通过ssh服务实现的远程登录功能，默认ssh服务端口号为 22。（ SSH：Secure SHell是用于远程管理UNIX计算机的一个网络协议。 ）SSH 为建立在应用层和传输层基础上的安全协议。
+Window系统上 Linux 远程登录客户端有SecureCRT, Putty, SSH Secure Shell等，本文以Putty为例来登录远程服务器。
+windows->linux 连接教程：https://www.runoob.com/linux/linux-remote-login.html
+linux->linux :
+--------命令行步骤
+yum install ssh #安装ssh服务
+service sshd start #启动ssh服务
+ssh -p 50022 my@127.0.0.1 #登录服务端 例子：ssh -p 端口 用户名@服务器ip
+输入密码：
+my@127.0.0.1:
+-----注-----
+-p 后面是端口
+my 是服务器用户名
+127.0.0.1 是服务器 ip
+回车输入密码即可登录
