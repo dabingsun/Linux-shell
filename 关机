@@ -1,0 +1,12 @@
+-----关机
+shutdown -h now #现在立刻关机
+shutdown -h 10 #10分钟后关机
+shutdown -h 20:10 #设置晚上8：10关机 （09:35）
+-----重启
+shutdown -r now #现在立刻重启
+-----取消关机
+shutdown -c #取消即将进行的关机
+
+---
+reboot #重启 相当于shutdown -r now
+halt #关机 相当于shutdown –h now 和 poweroff
